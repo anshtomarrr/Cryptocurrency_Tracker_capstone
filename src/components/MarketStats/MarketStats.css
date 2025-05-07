@@ -1,54 +1,54 @@
-.stats-card {
-    background-color: rgba(20, 20, 35, 0.7);
-    backdrop-filter: blur(10px);
-    border-radius: 12px;
-    padding: 1.5rem;
-    height: 100%;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+.market-stats {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.stats-card h3 {
-    color: #8a8af0;
-    margin-bottom: 1.2rem;
-    font-size: 0.9rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.market-stats h3 {
+  color: #2d2d3a;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
 }
 
-.stats-list {
-    display: flex;
-    flex-direction: column;
-    gap: 0.8rem;
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
 }
 
 .stats-item {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0.8rem;
-    background-color: rgba(30, 30, 50, 0.4);
-    border-radius: 8px;
-    transition: transform 0.2s ease;
-}
-
-.stats-item:hover {
-    transform: translateY(-2px);
-    background-color: rgba(30, 30, 50, 0.6);
+  background-color: rgba(138, 138, 240, 0.1);
+  padding: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .stats-item span:first-child {
-    color: #8a8af0;
-    font-size: 0.85rem;
-    font-weight: 500;
-    opacity: 0.9;
+  color: #2d2d3a;
+  font-size: 0.8rem;
+  opacity: 0.8;
 }
 
 .stats-item span:last-child {
-    font-size: 0.95rem;
-    font-weight: 600;
-    color: #e1e1e6;
+  color: #2d2d3a;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-.green { color: #4cd787; }
-.red { color: #ff5c75; }
+.green {
+  color: #00a854;
+}
+.red {
+  color: #f5222d;
+}
+
+@media (max-width: 768px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
